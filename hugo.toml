@@ -28,19 +28,17 @@ name = 'github'
 url = 'https://github.com/Beardless'
 
 # GoatCounter Analytics
-# Sign up at https://www.goatcounter.com/ (free)
 [params.goatcounter]
 enable = true
-code = 'beardless-blog'  # Change to your GoatCounter site code
+code = 'beardless'
 
-# Giscus Comments
-# Configure at https://giscus.app/
+# Giscus Comments - enable Discussions first, then get categoryId from giscus.app
 [params.giscus]
-enable = true
+enable = false
 repo = 'Beardless/blog'
-repoId = 'R_kgDOQ6q29w'  # Get from giscus.app
+repoId = 'R_kgDOQ6q29w'
 category = 'Announcements'
-categoryId = ''  # Get from giscus.app after enabling Discussions
+categoryId = ''
 mapping = 'pathname'
 inputPosition = 'bottom'
 theme = 'preferred_color_scheme'
