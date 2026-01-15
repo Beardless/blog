@@ -5,65 +5,39 @@ draft: true
 tags: ['ai', 'pkm', 'obsidian', 'productivity']
 ---
 
-Most daily journaling systems fail within two weeks. Not because the concept is flawed, but because staring at a blank template every evening requires discipline most of us don't have. What if we flipped the model entirely?
+Most daily journaling systems fail within two weeks. Not because the concept is flawed, but because staring at a blank template every evening requires discipline most of us don't have. I tried probably five different setups before landing on something that actually stuck.
 
 ## The Empty Template Problem
 
 You know the drill. You set up a beautiful Obsidian vault, create the perfect daily note template with sections for gratitude, wins, reflections, and habits. Day one feels great. Day three, you're rushing through it. By day fourteen, the template mocks you with its emptiness.
 
-The friction isn't in the writing—it's in the starting. A blank page demands you remember what happened, categorize it, and articulate it coherently. That's a lot of cognitive load at the end of a long day.
+The friction isn't in the writing—it's in the starting. A blank page demands you remember what happened, categorize it, and articulate it coherently. That's a lot of cognitive load at the end of a long day when you just want to crash.
 
-Traditional solutions involve reducing the template, making it "frictionless." But then you lose the depth that makes journaling valuable in the first place. There's a better way.
+Traditional solutions involve reducing the template, making it "frictionless." But then you lose the depth that makes journaling valuable in the first place.
 
-## Flipping the Paradigm: AI Asks, You Answer
+## What If AI Asked the Questions Instead?
 
-What if instead of writing to a template, you had a conversation?
-
-Here's my setup: I type `/daily` in Claude, and instead of generating a note immediately, it asks me one simple question:
+My current setup flips things around. I type `/daily` in Claude, and instead of generating a note, it asks me one question:
 
 > "How was your day? What happened, what went well, what was difficult?"
 
-That's it. One open question. I respond naturally, rambling about my day like I'm talking to a friend. No structure required on my end.
-
-Then it follows up about habits—did I do my mobility routine? Close my activity rings? Get enough protein? A quick yes/no for each.
-
-From this conversation, Claude extracts the structure I never had to think about: events, wins, challenges, reflections. It formats everything into my Obsidian template and saves it to my vault.
-
-The key insight: **the AI handles the structure, I provide the content**. The cognitive load of organizing thoughts disappears.
-
-## Anatomy of My /daily Flow
-
-Let me walk you through what actually happens:
-
-**Step 1: The Opening Question**
-
-Claude asks about my day. I respond with whatever comes to mind:
+I respond like I'm texting a friend. No structure, no categories, just whatever comes out:
 
 > "Woke up late at 9. Got the kids ready, had a quick standup at 10, worked until 10:30. Went to the barber, picked up my daughter's medical referral. After lunch I called about her holter results and managed to schedule her surgery consultation in Warsaw—that was a win. Worked more, played with my son, moved car seats around because tomorrow I'm driving to Warsaw. Had a meeting at 6 while walking on the treadmill. Evening was dinner, kitchen cleanup, putting my son to bed."
 
-Raw, unstructured, stream of consciousness.
+Then Claude asks about habits—mobility routine? activity rings? protein? I just fire off quick answers.
 
-**Step 2: Habit Check**
+From this mess, Claude extracts structure: events, wins, challenges. It formats everything into my Obsidian template and saves it. The AI handles the organizing, I just talk.
 
-Claude asks which habits I completed from my predefined list:
-- Mobility routine
-- Closed activity rings
-- Diet on track
-- 7h sleep
-- Creatine
-- Protein target
+## The Part That Surprised Me
 
-I give quick answers: "Mobility no, rings yes, diet yes, sleep yes, creatine yes, protein yes."
+Claude can pull up all the conversations I had with it that day using `recent_chats`. So if I spent the morning researching bachelor party locations and the afternoon analyzing my Apple Health data, that context shows up in my daily note automatically.
 
-**Step 3: Context Aggregation**
+I don't have to remember what I worked on. The note documents both my life and my AI-assisted work in one place.
 
-Here's where it gets interesting. Claude uses its `recent_chats` tool to find all conversations I had with it that day. It summarizes the main topics automatically.
+## What the Output Looks Like
 
-On this particular day, I had researched locations for a friend's bachelor party and analyzed my Apple Health export data. Claude adds this context without me having to remember or mention it.
-
-**Step 4: Preview and Save**
-
-Claude shows me the formatted note:
+After our conversation, Claude shows me this:
 
 ```markdown
 # 📅 2026-01-15 (Thursday)
@@ -92,71 +66,43 @@ Leon, dinner, kitchen cleanup. Bedtime routine at 21.
 **Work with Claude:**
 - Bachelor party research—attractions near Szydłówko and Osieczek, 
   house rentals ~30 min from Warsaw
-- Apple Health data analysis (weight, sleep, HR, workouts) + updated 
-  weekly skill for manual CSV export
+- Apple Health data analysis (weight, sleep, HR, workouts)
 ```
 
-I confirm, it saves to my vault. Done in under 3 minutes.
+I confirm, it saves. Three minutes, done.
 
-## The Technical Setup (For the Curious)
+## How It Actually Works
 
-This runs on:
-- **Claude** with MCP (Model Context Protocol) integration
-- **Obsidian** as the knowledge base
-- A custom **skill file** that defines the workflow
+The setup is Claude with MCP (Model Context Protocol) connected to my filesystem, plus a "skill file"—basically a markdown document with instructions for Claude: what questions to ask, what format to use, where to save.
 
-The skill file is essentially a prompt that tells Claude:
-1. What questions to ask
-2. What format to use
-3. Where to save the file
-4. How to aggregate context from other conversations
+No coding required. The skill file is just text. Claude reads it and follows the steps like a checklist.
 
-The `recent_chats` tool is the secret sauce—it lets Claude see what else we discussed that day, creating automatic backlinks between my journal and my AI-assisted work.
+If you want to dig into the technical details, I'll share the skill file in a follow-up post.
 
-You don't need to code anything. The skill file is plain markdown with instructions. Claude follows them like a checklist.
+## This Is Part of a Bigger System
 
-## Beyond Daily: The Bigger System
+Daily notes feed into other workflows I've built:
 
-Daily notes are just one piece. The same pattern extends to:
+Weekly reviews aggregate the dailies, check habit streaks, and help me plan next week. Morning briefings pull from my calendar and recent context so I don't start the day confused. Health analysis spots patterns in my Apple Health exports—sleep correlations, workout consistency, weight trends.
 
-**Weekly Reviews**: Claude walks me through a structured review—summarizing daily notes, checking goal progress, identifying patterns in my habits, and helping me set priorities for next week. Data from dailies flows into weeklies automatically.
+Each piece connects. The daily note isn't just a record, it's an input for everything else.
 
-**Morning Briefings**: A quick rundown of today's calendar, pending tasks, and relevant context from recent work. No more "what was I doing?" moments.
+## Would This Work for You?
 
-**Health Trend Analysis**: Claude reads my Apple Health exports and spots patterns I'd miss—sleep quality correlations, workout consistency, weight trends toward my goals.
+Probably yes if you already use Obsidian, hate blank templates, and don't mind some initial setup.
 
-The daily note becomes an input node in a larger knowledge system. Each conversation feeds forward.
+Probably no if you want everything offline, feel weird about AI reading your journal, or enjoy the meditative ritual of writing by hand.
 
-## Is This For You?
+The setup requires Claude Pro and MCP configuration. It's not plug-and-play. But once it's running, the friction basically disappears.
 
-**This works well if you:**
-- Already use Obsidian or similar PKM tools
-- Find blank templates demotivating
-- Prefer talking/typing naturally over structured input
-- Want your AI conversations to persist as knowledge
-- Are comfortable with some technical setup
+## The Honest Takeaway
 
-**This might not be for you if:**
-- You prefer fully offline systems
-- The idea of AI reading your journal feels uncomfortable
-- You enjoy the meditative aspect of manual journaling
-- You want zero setup—this requires Claude Pro + MCP configuration
+I've tried a lot of productivity systems. Most didn't survive contact with real life—two kids, demanding job, limited energy. This one works because it asks almost nothing of me. I show up, ramble for two minutes, and get a structured record of my day.
 
-**Alternatives without the full setup:**
-- Use ChatGPT/Claude in conversation, manually copy the summary
-- Voice-to-text apps that transcribe rambling into notes
-- Templater + daily prompts in Obsidian (no AI, but reduces friction)
+Is it perfect? No. Sometimes Claude's summaries miss nuance. Sometimes I want to write more but don't because the conversation is already done. But I have 15 consecutive daily notes now, which is about 14 more than my previous attempts.
 
-## The Shift That Matters
-
-The real change isn't technical—it's conceptual. We've been treating AI as a generator: give it a prompt, get an output. But AI works better as an **interviewer**: it asks questions, you provide raw material, it handles synthesis.
-
-This inverts the effort. Instead of you doing the cognitive work of structuring thoughts, the AI does it. Your job is just to show up and talk.
-
-Fifteen days ago, I would have skipped journaling because I was tired. Yesterday, I typed `/daily`, answered a few questions, and had a complete record of my day in three minutes.
-
-The best productivity system is the one you actually use. Sometimes that means letting the AI do the boring parts.
+The best system is the one you actually use. For me, that meant outsourcing the boring parts to AI.
 
 ---
 
-*Want to build something similar? The skill file and setup instructions are on [GitHub](https://github.com/Beardless/blog). Questions? Find me there.*
+*Skill file and setup instructions coming in a future post. In the meantime, questions → [GitHub](https://github.com/Beardless).*
