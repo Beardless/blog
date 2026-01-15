@@ -1,0 +1,45 @@
+baseURL = 'https://beardless.github.io/blog/'
+languageCode = 'pl'
+title = 'Bart Mikolajczuk'
+theme = 'PaperMod'
+
+paginate = 10
+
+[params]
+env = 'production'
+author = 'Bart Mikolajczuk'
+description = 'Frontend developer, PKM enthusiast, indie hacker wannabe'
+DateFormat = '2006-01-02'
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowShareButtons = false
+defaultTheme = 'auto'
+
+[params.homeInfoParams]
+Title = 'Cześć 👋'
+Content = 'Frontend developer, PKM enthusiast, indie hacker wannabe. Piszę o produktywności, AI i budowaniu projektów.'
+
+[[params.socialIcons]]
+name = 'github'
+url = 'https://github.com/Beardless'
+
+[menu]
+[[menu.main]]
+name = 'Artykuły'
+url = '/posts/'
+weight = 1
+
+[[menu.main]]
+name = 'Tagi'
+url = '/tags/'
+weight = 2
+
+[outputs]
+home = ['HTML', 'RSS', 'JSON']
+
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+style = 'monokai'
