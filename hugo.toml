@@ -3,7 +3,8 @@ languageCode = 'pl'
 title = 'Bart Mikolajczuk'
 theme = 'PaperMod'
 
-paginate = 10
+[pagination]
+pagerSize = 10
 
 [params]
 env = 'production'
