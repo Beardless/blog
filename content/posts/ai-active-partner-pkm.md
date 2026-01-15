@@ -1,8 +1,8 @@
 ---
-title: 'AI as an Active Partner in PKM: How Claude Runs My Daily Journal'
+title: "AI as an Active Partner in PKM: How Claude Runs My Daily Journal"
 date: 2026-01-15
-draft: true
-tags: ['ai', 'pkm', 'obsidian', 'productivity']
+draft: false
+tags: ["ai", "pkm", "obsidian", "productivity"]
 ---
 
 Most daily journaling systems fail within two weeks. Not because the concept is flawed, but because staring at a blank template every evening requires discipline most of us don't have. I tried probably five different setups before landing on something that actually stuck.
@@ -44,12 +44,12 @@ After our conversation, Claude shows me this:
 
 ## What happened today?
 
-Late start (9:00). Standup at 10, work until 10:30, then barber in 
-Biała. Picked up Jaśmina's referral. After lunch—called about her 
+Late start (9:00). Standup at 10, work until 10:30, then barber in
+Biała. Picked up Jaśmina's referral. After lunch—called about her
 holter results and scheduled surgery consultation in Warsaw ✅
 
-Work until 16:30. Played with Leon, dinner, moved car seats to Mazda 
-(Volvo goes to Warsaw tomorrow). Meeting at 18 + treadmill. Evening: 
+Work until 16:30. Played with Leon, dinner, moved car seats to Mazda
+(Volvo goes to Warsaw tomorrow). Meeting at 18 + treadmill. Evening:
 Leon, dinner, kitchen cleanup. Bedtime routine at 21.
 
 ## Habits
@@ -64,7 +64,8 @@ Leon, dinner, kitchen cleanup. Bedtime routine at 21.
 ## Notes
 
 **Work with Claude:**
-- Bachelor party research—attractions near Szydłówko and Osieczek, 
+
+- Bachelor party research—attractions near Szydłówko and Osieczek,
   house rentals ~30 min from Warsaw
 - Apple Health data analysis (weight, sleep, HR, workouts)
 ```
@@ -105,4 +106,4 @@ The best system is the one you actually use. For me, that meant outsourcing the 
 
 ---
 
-*Skill file and setup instructions coming in a future post. In the meantime, questions → [GitHub](https://github.com/Beardless).*
+_Skill file and setup instructions coming in a future post. In the meantime, questions → [GitHub](https://github.com/Beardless)._
