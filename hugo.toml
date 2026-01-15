@@ -32,13 +32,13 @@ url = 'https://github.com/Beardless'
 enable = true
 code = 'beardless'
 
-# Giscus Comments - enable Discussions first, then get categoryId from giscus.app
+# Giscus Comments
 [params.giscus]
-enable = false
+enable = true
 repo = 'Beardless/blog'
 repoId = 'R_kgDOQ6q29w'
 category = 'Announcements'
-categoryId = ''
+categoryId = 'DIC_kwDOQ6q2984C1Adf'
 mapping = 'pathname'
 inputPosition = 'bottom'
 theme = 'preferred_color_scheme'
