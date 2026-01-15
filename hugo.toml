@@ -17,6 +17,7 @@ ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
 ShowShareButtons = false
 defaultTheme = 'auto'
+comments = true
 
 [params.homeInfoParams]
 Title = 'Hey 👋'
@@ -25,6 +26,25 @@ Content = 'Frontend dev by day, system tinkerer by night. Writing about AI workf
 [[params.socialIcons]]
 name = 'github'
 url = 'https://github.com/Beardless'
+
+# GoatCounter Analytics
+# Sign up at https://www.goatcounter.com/ (free)
+[params.goatcounter]
+enable = true
+code = 'beardless-blog'  # Change to your GoatCounter site code
+
+# Giscus Comments
+# Configure at https://giscus.app/
+[params.giscus]
+enable = true
+repo = 'Beardless/blog'
+repoId = 'R_kgDOQ6q29w'  # Get from giscus.app
+category = 'Announcements'
+categoryId = ''  # Get from giscus.app after enabling Discussions
+mapping = 'pathname'
+inputPosition = 'bottom'
+theme = 'preferred_color_scheme'
+lang = 'en'
 
 [menu]
 [[menu.main]]
